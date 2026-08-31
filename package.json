@@ -1,0 +1,15 @@
+{
+  "name": "employee-expense-reimbursement-system-root",
+  "version": "1.0.0",
+  "description": "Root orchestration for Employee Expense & Reimbursement Management System (React + FastAPI concurrently)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix frontend",
+    "dev:backend": "backend/.venv/bin/uvicorn main:app --app-dir backend/app --reload --port 8000",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently --kill-others \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
